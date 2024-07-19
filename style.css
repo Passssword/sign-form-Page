@@ -1,0 +1,158 @@
+:root {
+	/* Colors */
+	--back_fon: #779459; /* общий фон */
+	--color_text: #000000;
+	--color_label: rgba(0, 0, 0, 0.5);
+	--color_form_fon: #E8EAE0;
+	--color_h1_fon_1: #FFFFFF;
+	--color_h1_fon_2: #637A30;
+	--color_button_1: #E1E2D9;
+	--color_sign_header: #42563D;
+	--color_input_fon_1: #DDE1CD;
+
+	/* test colors */
+	--color_test_box_1: #516F91;
+	/*Width & Height*/
+	--page_width: 1780px;
+	--page_height: 700px;
+	--sign_form_width_hight: 450px;
+}
+@font-face {
+	font-family: "Poppins-Bold";
+	src: url(fonts/Poppins-Bold.ttf);
+}
+@font-face {
+	font-family: "Poppins-ExtraBold";
+	src: url(fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+	font-family: "Poppins-Medium";
+	src: url(fonts/Poppins-Medium.ttf);
+}
+* {
+	margin: 0;
+	padding: 0;
+	font: normal 15px "Poppins-Medium",sans-serif;
+	color: var(--color_text);
+}
+body {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--back_fon);
+}
+.desk_form {
+	display: -webkit-flex;
+	display: flex;
+	margin: 100px 0 0 0;
+	width: var(--page_width);
+	height: var(--page_height);
+	background: var(--color_form_fon);
+}
+div.image {
+	position: relative;
+	background: url(img/leaves_fon.jpg), no-repeat, fixed;
+	background-size: cover;
+	width: 40%;
+	height: 100%;
+}
+h1 {
+	position: absolute;
+	right: -295px;
+	top: 30%;
+	-o-transform: scale(-1, 1);
+	-webkit-transform: rotate(270deg);
+	font-family: "Poppins-Bold";
+	font-size: 150px;
+	background: -webkit-linear-gradient(var(--color_h1_fon_1) 49%, var(--color_h1_fon_2) 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+.sign_box {
+	flex: 1; /* заполняет свободное пространство */
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	
+  }
+.sign_groop {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: var(--sign_form_width_hight);
+  }
+.sign_header {
+	display: inline-block;
+	margin: 0 0 20px 0;
+	font-family: "Poppins-Bold";
+	font-size: 46px;
+	line-height: 84px;
+	color: var(--color_sign_header);
+  }
+.input_box {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.input_contener {
+	flex: 1;
+	position: relative;
+	margin: 10px 5px;
+	padding: 5px;
+	border-style: none;
+	outline-style: none;
+	border-radius: 4px;
+	height: 45px;
+	background: var(--color_input_fon_1);
+}
+label {
+	position: absolute;
+	font-weight: 300;
+	line-height: 15px;
+	color: var(--color_label);
+	transition: 0.2s ease all;
+}
+.label_default {
+	left: 15px;
+	top: 30px;
+	font-size: 18px;
+}
+.label_focus {
+	left: 15px;
+	top: 10px;
+	font-size: 10px;
+}
+input {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	width: 95%;
+	background: none;
+	border: none;
+}
+input:focus {
+	outline: none;
+}
+
+button {
+	flex: 1;
+	margin: 20px 5px;
+	border-style: none;
+	height: 45px;
+	border-radius: 4px;
+	background: var(--color_button_1);
+	color: var(--color_label);
+	transition: 0.2s ease all;
+}
+button:hover {
+	background: var(--color_h1_fon_2);
+	color: var(--color_h1_fon_1);
+	box-shadow: 0px 0px 30px rgba(99, 122, 48, 0.4);
+}
